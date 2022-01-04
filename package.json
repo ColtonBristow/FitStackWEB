@@ -1,0 +1,46 @@
+{
+  "name": "fitstack_web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/material": "^5.2.3",
+    "@mui/styles": "^5.2.3",
+    "@types/graphql": "^14.5.0",
+    "@types/lodash": "^4.14.178",
+    "@types/react-dropzone": "^5.1.0",
+    "@types/react-jss": "^10.0.0",
+    "@types/react-modal": "^3.13.1",
+    "axios": "^0.24.0",
+    "formik": "^2.2.9",
+    "graphql": "^16.2.0",
+    "history": "^5.1.0",
+    "lodash": "^4.17.21",
+    "mobx": "^6.3.8",
+    "mobx-react-lite": "^3.2.2",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^11.4.2",
+    "react-jss": "^10.9.0",
+    "react-modal": "^3.14.4",
+    "react-responsive-modal": "^6.1.0",
+    "styled-components": "^5.3.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.12",
+    "@types/react": "17.0.37",
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "typescript": "4.5.3"
+  }
+}
