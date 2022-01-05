@@ -13,8 +13,6 @@ import FitStackDeleteButton from './FitStackDeleteButton';
 const FileDropzone = (props: any) => {
     const styles = useStyles();
     const {applicationStore} = useStore();
-    const {selectedApplicationFiles, addFilesToSelectedFiles, 
-        removeAllFilesFromSelectedApplicationFiles, removeFileFromSelectedApplicationFiles} = applicationStore;
 
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
     const [progress, setProgress] = useState(0);

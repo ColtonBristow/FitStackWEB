@@ -4,15 +4,13 @@ import { RegisterDto } from "../Dtos/RegisterDto";
 import { AppUser } from "../models/appUser";
 import {store} from "../stores/store";
 
-//axios.defaults.baseURL = "https://fitstack-api.azurewebsites.net/api";
-axios.defaults.baseURL = "https://localhost:5001/api";
-
-
-/* axios.interceptors.request.use((config:any) =>{
-  const token = store.commonStore.token;
+axios.defaults.baseURL = "https://fitstack-api.azurewebsites.net/api";
+//axios.defaults.baseURL = "https://localhost:5001/api";
+axios.interceptors.request.use((config:any) =>{
+  const token = store.userStore.token;
   if(token) config.headers.Authorization = `Bearer ${token}`
   return config; 
-}) */
+})
 export interface ActiveState{
   state:boolean;
 }
@@ -26,22 +24,11 @@ const requests = {
   del: <T>(url: string) => axios.delete<T>(url).then(responseBody),
 };
 
-// const Customers = {
-//   list: () => requests.get<Customer[]>("Customer/customers"),
-//   details: (id: string) => requests.get<Customer>(`/Customer/${id}`),
-//   create: (customer: Customer) => requests.post("/Customer", customer),
-//   update: (customer: Customer) =>
-//     requests.put(`/Customer/${customer.id}`, customer),
-//   delete: (id: string) => requests.del(`/Customer/${id}`),
-// };
-
 const Account = {
   login: (creds: LoginDto) => requests.post<AppUser>("/Account/login", creds),
   register: (dto: RegisterDto) => requests.post<AppUser>("/Account/register", dto),
+  current: () => requests.get<AppUser>("/Account"),
 }
-
-
-
 
 const agent ={
   Account
