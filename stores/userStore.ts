@@ -6,7 +6,7 @@ import { AppUser } from "../models/appUser";
 export default class UserStore{
     isRegistering: boolean = false;
     currentUser: AppUser | undefined = undefined;
-    token: string | null = window.localStorage.getItem('token'); 
+    token: string | null = null;
 
     constructor(){
         makeAutoObservable(this);
@@ -45,17 +45,33 @@ export default class UserStore{
     }
 
     login = async (creds: LoginDto) => {
-        await agent.Account.login(creds).then((res: AppUser) => {
+/*         await agent.Account.login(creds).then((res: AppUser) => {
             runInAction(() => {
                 this.currentUser = res;
                 this.token = res.token;
             })
         }).catch((error) => {throw error})
 
-        console.log("Current user is: ", this.currentUser);
+        console.log("Current user is: ", this.currentUser); */
+
+        try{
+            let user = await agent.Account.login(creds);
+            runInAction(() => {
+                this.currentUser = user;
+                this.token = user.token;
+            })
+        }catch(error){
+            throw error;
+        }
     }
 
     getUser = async () => {
+        if(this.token === null){
+            const token = window.localStorage.getItem("token");
+            runInAction(() => {
+                this.token = token;
+            })
+        }
         await agent.Account.current().then((res) => {
             runInAction(() => {
                 this.currentUser = res;

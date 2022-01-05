@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const {userStore} = useStore();
 
   useEffect(() => {
-    userStore.getTokenFromLocalStorage();
-  },[])
+    userStore.getUser();
+  },[userStore])
   
   return <Component {...pageProps} />
 }
