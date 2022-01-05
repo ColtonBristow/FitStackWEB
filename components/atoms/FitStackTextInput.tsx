@@ -47,8 +47,10 @@ import { Colors } from '../../constants/Colors';
         container: {
             marginTop: 0,
             marginBottom: 15,
+            minWidth: 300,
         },
         textInput: {
+            minWidth: 300,
             marginBottom: ".3em",
             width: 300,
             color: 'black',
