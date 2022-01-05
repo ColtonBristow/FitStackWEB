@@ -24,10 +24,7 @@ const HomePageHeader = (props: any) => {
                 <div className={styles.buttonContainer} >
                     <FitStackStoreButton signIn={true} title="Sign In" onClick={() => modalStore.setSignInRegisterModalIsOpen(true)}/>
                     <FitStackStoreButton demo={true} title="Demo" onClick={() => {
-                        agent.test.list("61b825f053eccfa84a09bd7f").then((res) => {
-                            let post: Post = Object.assign({}, res.data.getPost);
-                            console.log("Post is: ", post);
-                        })
+                        console.log('demo');
                     }} />  
                 </div>
             </div>
