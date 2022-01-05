@@ -34,7 +34,7 @@ import styles from './css/FitStackTextInput.module.css'
                     color: Colors.mainButtonColor,
                 },
             },
-            "&. MuiStandardInput-input":{ 
+            "&. MuiStandardInput-input":{
                 color: 'black',
                 "&:hover fieldset": {
                     borderColor: Colors.mainBackgroundColor,
@@ -45,11 +45,27 @@ import styles from './css/FitStackTextInput.module.css'
         },
     })(TextField);
 
+    const useStyles = makeStyles(() => ({
+        container: {
+            marginTop: 0,
+            marginBottom: 15,
+            minWidth: 300,
+        },
+        textInput: {
+            minWidth: 300,
+            marginBottom: ".3em",
+            width: 300,
+            color: 'black',
+        },
+    }));
+
 export default function FitStackTextInput (props: any)  {
+
+    const classes = useStyles();
     return(
-        <div className={styles.container}>
+        <div className={classes.container}>
             <CssTextField
-                  className={styles.textInput}
+                  className={classes.textInput}
                   label={props.label}
                   placeholder={props.label}
                   variant="standard"
