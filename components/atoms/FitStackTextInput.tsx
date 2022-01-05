@@ -3,11 +3,13 @@ import TextField from "@material-ui/core/TextField";
 import { StylesContext } from '@material-ui/styles';
 import React from 'react';
 import { Colors } from '../../constants/Colors';
+import styles from './css/FitStackTextInput.module.css'
 
 
 
     const CssTextField = withStyles({
         root: {
+            minWidth: 300,
             "& label.Mui-focused": {
                 color: Colors.mainButtonColor,
                 "&:hover fieldset": {
@@ -32,7 +34,7 @@ import { Colors } from '../../constants/Colors';
                     color: Colors.mainButtonColor,
                 },
             },
-            "&. MuiStandardInput-input":{
+            "&. MuiStandardInput-input":{ 
                 color: 'black',
                 "&:hover fieldset": {
                     borderColor: Colors.mainBackgroundColor,
@@ -43,27 +45,11 @@ import { Colors } from '../../constants/Colors';
         },
     })(TextField);
 
-    const useStyles = makeStyles(() => ({
-        container: {
-            marginTop: 0,
-            marginBottom: 15,
-            minWidth: 300,
-        },
-        textInput: {
-            minWidth: 300,
-            marginBottom: ".3em",
-            width: 300,
-            color: 'black',
-        },
-    }));
-
 export default function FitStackTextInput (props: any)  {
-
-    const classes = useStyles();
     return(
-        <div className={classes.container}>
+        <div className={styles.container}>
             <CssTextField
-                  className={classes.textInput}
+                  className={styles.textInput}
                   label={props.label}
                   placeholder={props.label}
                   variant="standard"

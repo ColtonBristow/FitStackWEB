@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { Colors } from "../../constants/Colors";
 //import { ReactComponent as Logo } from "../../images/AppLogo.svg";
@@ -16,6 +16,7 @@ import { observer } from "mobx-react-lite";
 
 const RegisterCard: React.FC = (props: any) => {
   const { modalStore, userStore } = useStore();
+  const [page, setPage] = useState(1);
 
   const validationSchema = yup.object().shape({
     email: yup
@@ -195,6 +196,7 @@ const useStyles = createUseStyles({
     marginRight: "2em",
   },
   bodyContainer: {
+    minHeight: '80%',
     height: "80%",
     display: "flex",
     flexDirection: "column",
