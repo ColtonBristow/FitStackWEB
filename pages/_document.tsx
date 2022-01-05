@@ -4,14 +4,20 @@ import React from 'react'
 import { Component } from 'react'
 import { SheetsRegistry, JssProvider, createGenerateId } from 'react-jss'
 
+// eslint-disable-next-line react/display-name
 export default class JssDocument extends Document {
+  static displayName = "JssDocument";
+  // eslint-disable-next-line react/display-name
   static async getInitialProps(ctx: DocumentContext) {
     const registry = new SheetsRegistry()
     const generateId = createGenerateId()
     const originalRenderPage = ctx.renderPage
     const sheets = new ServerStyleSheets();
+    // eslint-disable-next-line react/display-name
     ctx.renderPage = () =>
+    // eslint-disable-next-line react/display-name
       originalRenderPage({
+        // eslint-disable-next-line react/display-name
         enhanceApp: (App) => (props) =>
           (
 
@@ -19,11 +25,11 @@ export default class JssDocument extends Document {
                 {sheets.collect(<App {...props} />)},
             </JssProvider>
           ),
+        // eslint-disable-next-line react/display-name
         enhanceComponent: (Component) => Component,
       })
-
     const initialProps = await Document.getInitialProps(ctx)
-
+    // eslint-disable-next-line react/display-name
     return {
       ...initialProps,
       styles: (
@@ -35,6 +41,8 @@ export default class JssDocument extends Document {
     }
   }
 }
+
+
 
 /* JssDocument.getInitialProps = async ctx => {
   const sheets = new ServerStyleSheets()
