@@ -4,8 +4,6 @@ import { RegisterDto } from "../Dtos/RegisterDto";
 import { AppUser } from "../models/appUser";
 import {store} from "../stores/store";
 
-//axios.defaults.baseURL = "https://fitstack-api.azurewebsites.net/api";
-axios.defaults.baseURL = "https://localhost:5001/api";
 axios.defaults.baseURL = "https://fitstack-api.azurewebsites.net/api";
 //axios.defaults.baseURL = "https://localhost:5001/api";
 axios.interceptors.request.use((config:any) =>{
