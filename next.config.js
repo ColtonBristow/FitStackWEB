@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const app = 'NODE_ENV=production'
 module.exports = {
   options: {
     dist: ".next"
