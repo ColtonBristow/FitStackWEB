@@ -1,0 +1,50 @@
+.margin {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.storeIcons {
+    margin-right: 4%;
+    padding-bottom: 3%;
+}
+
+.demoIcon {
+    margin-right: 4%;
+}
+
+.personIcon {
+    margin-right: 4%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.colorButton {
+    background-color: var(--mainButtonColor);
+    color: white;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    max-width: 180px;
+    height: 42px;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+.colorButton:MuiButton-root {
+    color: white;
+    background-color: var(--mainButtonColor);
+    min-width: 180px;
+    width: 180px;
+    max-width: 180px;
+    height: 42px;
+    border-radius: 10;
+}
+
+.colorButton:hover {
+    background-color: var(--mainButtonColor);
+}

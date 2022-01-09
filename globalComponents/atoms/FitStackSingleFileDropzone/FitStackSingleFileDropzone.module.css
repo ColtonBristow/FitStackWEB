@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-width: 2px;
+    border-radius: 2px;
+    border-color: black;
+    border-style: dashed;
+    background-color: #fafafa;
+    color: #bdbdbd;
+    outline: none;
+    min-width: 500;
+    margin-top: 10;
+    margin-bottom: 10;
+    max-width: 80%;
+}
+
+.fileContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15;
+}
+
+.selectedFileText {
+    font-weight: bold;
+    max-width: 40%;
+}
+
+.fileName {
+    font-weight: bold;
+    max-width: 40%;
+    max-height: 30%;
+}
+
+.dragFilesText {
+    cursor: pointer;
+}
+
+.labelContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input {
+    max-width: 80%;
+}
+
+.deleteButtonContainer {
+    z-index: 15;
+}
+
+.fileListContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}

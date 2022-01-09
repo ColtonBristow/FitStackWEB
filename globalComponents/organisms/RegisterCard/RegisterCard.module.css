@@ -1,0 +1,76 @@
+.cardContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentContainer {
+    width: 25%;
+    background-color: var(--mainBackgroundColor);
+    border-radius: 20px;
+    margin-bottom: 15%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    height: .3em;
+    width: .3em;
+    margin-right: 1em;
+}
+
+.headerContainer {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    align-items: center;
+    width: 100%;
+}
+
+.logoTextContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    margin-left: 3em;
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    margin-right: 2em;
+}
+
+.bodyContainer {
+    min-height: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.linkContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.h5 {
+    margin-left: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+    color: rgba(254,99,71,1)
+}

@@ -1,0 +1,13 @@
+.text {
+    color: rgba(254,99,71,1);
+    font-size: 3em;
+}
+
+.colorButton {
+    max-width: 1em;
+    width: 1em;
+}
+
+.colorButton:hover {
+    background-color: var(--mainBackgroundColor);
+}

@@ -1,0 +1,48 @@
+.container {
+    margin-bottom: 15px;
+    min-width: 300px;
+}
+
+.textInput {
+    min-width: 300px;
+    margin-bottom: .3em;
+    width: 300px;
+    color: black;
+}
+
+.cssTextField {
+    min-width: 300px;
+    root {
+        & label.Mui-focused {
+            color: red;
+            &:hover fieldset {
+                border-color: red;
+            }
+        }
+        & .MuiInput-underline:after {
+            border-bottom-color: red;
+            color: red;
+        }
+        & .MuiOutlinedInput-root {
+            & fieldset {
+                border-color: red;
+                color: red;
+            }
+            &:hover fieldset {
+                border-color: red;
+                color: red;
+            }
+            &.Mui-focused fieldset {
+                border-color: red;
+                color: red;
+            }
+        }
+        & .MuiStandardInput-input {
+            color: red;
+            &:hover fieldset {
+                border-color: red;
+                color: red;
+            }
+        }
+    }  
+}

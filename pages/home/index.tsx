@@ -1,22 +1,19 @@
-import { url } from "inspector";
 import { observer } from "mobx-react-lite";
 import { NextPage } from "next";
-import React, {useState} from "react";
-import { createUseStyles } from "react-jss";
+import React from "react";
 import { useStore } from "../../stores/store";
-import HomePageBody from "../../components/organisms/HomePageBody";
-import HomePageHeader from "../../components/organisms/HomePageHeader";
-import NavBar from "../../components/organisms/NavBar";
-import RegisterCard from "../../components/organisms/RegisterCard";
-import SignInCard from "../../components/organisms/SignInCard";
 import { Modal } from "@mui/material";
-
+import HomePageHeader from "./components/organisms/HomePageHeader/HomePageHeader";
+import HomePageBody from "./components/organisms/HomePageBody/HomePageBody";
+import NavBar from "../../globalComponents/organisms/NavBar/NavBar";
+import SignInCard from "../../globalComponents/organisms/SignInCard/SignInCard";
+import RegisterCard from "../../globalComponents/organisms/RegisterCard/RegisterCard";
+import s from './HomePage.module.css'
 
 const Home: NextPage = observer((props: any) => {
   const {modalStore, userStore} = useStore();
-  const styles = createStyles();
   return (
-    <div className={styles.homePageContainer}>
+    <div className={s.homePageContainer}>
       <Modal
         open={modalStore.signRegisterModalIsOpen}
         onClose={() => modalStore.setSignInRegisterModalIsOpen(false)}
@@ -33,10 +30,3 @@ const Home: NextPage = observer((props: any) => {
 
 export default Home
 
-const createStyles = createUseStyles({
-  homePageContainer: {
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-  },
-});

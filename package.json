@@ -1,9 +1,9 @@
 {
-  "name": "fitstack_web",
+  "name": "fitstackweb",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_ENV=production next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,12 +12,10 @@
     "@emotion/styled": "^11.6.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.2.5",
     "@mui/material": "^5.2.3",
     "@mui/styles": "^5.2.3",
-    "@types/graphql": "^14.5.0",
     "@types/lodash": "^4.14.178",
-    "@types/react-dropzone": "^5.1.0",
-    "@types/react-jss": "^10.0.0",
     "@types/react-modal": "^3.13.1",
     "axios": "^0.24.0",
     "formik": "^2.2.9",
@@ -33,14 +31,15 @@
     "react-jss": "^10.9.0",
     "react-modal": "^3.14.4",
     "react-responsive-modal": "^6.1.0",
+    "sass": "^1.46.0",
     "styled-components": "^5.3.3",
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/node": "16.11.12",
-    "@types/react": "17.0.37",
-    "eslint": "8.4.1",
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
-    "typescript": "4.5.3"
+    "typescript": "4.5.4"
   }
 }
